@@ -1,0 +1,61 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+bin
+node_modules
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Ignore Jenkins Tmp folders ###
+*@tmp
+
+### Fish settings ###
+$HOME
+
+### Logs ###
+logs/
+podLogs/
+profile.log
+
+### Mac ###
+**/.DS_Store
+
+/podLogs/
+
+### Transaction file ###
+*transaction.log
+
+### Helm ###
+*Chart.lock
+*requirements.lock
+helm_template.yaml
+
+### Others ###
+charts/configuration-backend/keys/configurations-github-configurations-PROD.key
+java-libraries/models/osm2-angbet-systemafstemning-model/src/main/resources/jsonschema/sharedDefinitions.json
