@@ -1,6 +1,5 @@
 <template>
   <div class="form-container">
-  <div :style="{ backgroundColor: myColor }"
    <form @submit.prevent="sendRequest()" @keydown.prevent.enter>
     <b-field label="Name">
       <b-input v-model="contact.name"></b-input>
@@ -15,14 +14,14 @@
         <b-input maxlength="200" v-model="contact.message" type="textarea"></b-input>
     </b-field>
     <label>Showit </label>
-    <input type="checkbox" v-model="contact.active"></input><br>
+    <input type="checkbox" v-model="contact.active"><br>
     <label>Male </label>
-    <input type="radio" value="male" v-model="contact.gender"></input><br>
+    <input type="radio" value="male" v-model="contact.gender"><br>
     <label>Female </label>
-    <input type="radio" value="female" v-model="contact.gender"></input><br>
-    <ul>
-    <li v-for="name in contact.myArray">{{ name }}</li>
-    </ul>
+    <input type="radio" value="female" v-model="contact.gender"><br>
+     <ul>
+       <li v-for="(value, index) in myArray" v-bind:key="index">{{ value }} ({{index}})</li>
+     </ul>
     <select v-model="contact.selection">
     <option>male</option>
     <option>female</option>
@@ -41,7 +40,6 @@
        </div>
      </div>
    </div>
-  </div>
   </div>
 </template>
 
@@ -69,7 +67,6 @@ export default {
     sendRequest() {
       this.submit = true
       this.submitions.push(this.contact)
-      console.log(this.contact)
     }
   }
 }
